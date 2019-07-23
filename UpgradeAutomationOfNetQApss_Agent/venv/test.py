@@ -3,7 +3,7 @@ import sys
 import paramiko
 
 nbytes = 4096
-hostname = '10.20.14.203'
+hostname = '10.20.14.215'
 port = 22
 username = 'cumulus'
 password = 'CumulusLinux!'
@@ -43,16 +43,6 @@ def NetQAppsUpgradeTest():
 NetQAppsUpgradeTest()
 
 # Setting up the aws cli to download the tar ball for NetQ apps upgrade
-def preUpgradeTest():
-    HydraUser = ''
-    HydraPassword = ''
-    HydraHostName = ''
-    client = paramiko.Transport((HydraHostName, port))
-    client.connect(username=HydraUser, password=HydraPassword)
-    sessionOfHydra = client.open_channel(kind='sessionOfHydra')
-    sessionOfHydra.exec_command('scp /tmp/syadava/NetQ-2.2.0-SNAPSHOT.tgz')
-
-
 
 
 

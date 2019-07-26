@@ -3,7 +3,7 @@ import sys
 import paramiko
 
 nbytes = 4096
-hostname = '10.20.14.215'
+hostname = '10.20.14.192'
 port = 22
 username = 'cumulus'
 password = 'CumulusLinux!'
